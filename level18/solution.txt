@@ -1,0 +1,10 @@
+-gdb로 뜯는다.
+
+대충 count를 장난치면 될꺼같다.
+
+
+-count ebp-112
+-check ebp-104
+-string ebp-100
+
+0x08을 4개 넣어줘서 count를 밀어준다.
