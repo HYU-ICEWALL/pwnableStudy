@@ -1,0 +1,11 @@
+-물론 gdb로 까본다
+
+-대충 볼땐 fgets에서 취약점이있을꺼라는걸 알 수 있다.
+-스택이 아래부터 쌓일테니 버퍼 20개를 더미로 넣고 check를 0xdeadbeef로 바꿔서 하는거라는것을 짐작할 수 있다.
+
+	=gdb에서 확인하니 buf, dummy, check가 각각 20, 20, 4 를 차지하고 있는것을 확인할 수 있다. fgets가 45개까지 받을 수 있으므로 check까지 45가 안 넘친다는 것을 확인할 수 있다.
+
+	=그러므로 40바이트 넣고 0xdeadbeef를 넣자
+
+	(python -c 'print "a"*40+"\xef\xbe\xad\xde"';cat)|./attackme
+	
