@@ -13,3 +13,7 @@ main()
 	}
 	return 0;
 }
+
+
+ebp-56 buf
+ebp-16 check
