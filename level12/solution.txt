@@ -1,0 +1,8 @@
+-이번엔 gets에 취약점이 있을 꺼다.
+-일단 gdb로 까본다.
+	=264byte SFP, ReT이 각각 4byte가 있어야 하니 268+주소 를 이전처럼 넣어주면 될 것같다.
+	=다만 이번 hint에서는 main의 argument가 void로 설정되어있어 attackme에 바로 인자를 넘겨줄 수 없다.
+	=환경변수를 설정해 지정되어있는 주소를 알아내어 실행하면 될 것 같다.
+
+	=(python -c "print 'a'*268+'주소'";cat)|./attackme
+-solv
