@@ -1,0 +1,8 @@
+이번엔 역시 기대했던 gets가 나왔다
+
+(python -c 'print code ';cat)|./goblin
+
+과 같이 실행해준다
+
+
+환경변수안해도되니 너무좋다
